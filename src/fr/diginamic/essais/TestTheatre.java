@@ -11,6 +11,10 @@ public class TestTheatre {
 		theatre1.inscrire(5, 5);
 		theatre1.inscrire(13, 10);
 		theatre1.inscrire(20, 10);
+		
+		System.out.println("Total de clients inscrits : " + theatre1.getTotalCustomers());
+		System.out.println("Recette totale du théatre : " + theatre1.getTotalRecipe());
 	}
+	
 
 }
