@@ -1,5 +1,6 @@
-package fr.diginamic.entities;
+package fr.diginamic.essais;
 
+import fr.diginamic.entities.Cercle;
 import fr.diginamic.utils.CercleFactory;
 
 public class TestCercle {
