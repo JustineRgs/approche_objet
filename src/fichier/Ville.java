@@ -1,6 +1,6 @@
 package fichier;
 
-public class Ville {
+public class Ville implements Comparable<Ville> {
 	private String name;
 	private String numDepartment;
 	private String nameRegion;
@@ -12,6 +12,20 @@ public class Ville {
 		this.numDepartment = numDepartment;
 		this.nameRegion = nameRegion;
 		this.totalPopulation = totalPopulation;
+	}
+
+	@Override
+	public int compareTo(Ville other) {
+		// Population ordre croissant / décroissant (inversement 1/-1)
+		if (other.getTotalPopulation() < this.totalPopulation) {
+			return -1;
+		} else if (other.getTotalPopulation() > this.totalPopulation) {
+			return 1;
+		}
+		return 0;
+
+		// Ordre alphabétique
+		// return this.name.compareTo(other.getName());
 	}
 
 	@Override

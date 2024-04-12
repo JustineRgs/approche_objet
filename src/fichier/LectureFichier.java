@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +15,7 @@ public class LectureFichier {
 	public static void main(String[] args) throws IOException {
 		Path path = Paths.get("C:/Users/Tinou/Desktop/DEV/JAVA/approche_objet/src/fichier/recensement.csv");
 		List<String> list = Files.readAllLines(path);
-
+		
 		for (String line : list) {
 			System.out.println(line);
 		}
@@ -34,7 +35,8 @@ public class LectureFichier {
 			Ville ville = new Ville(name, numDepartment, nameRegion, totalPopulation);
 			cities.add(ville);
 		}
-
+		
+		Collections.sort(cities);
 		for (Ville city : cities) {
 			System.out.println(city);
 		}
@@ -45,7 +47,8 @@ public class LectureFichier {
 
 		String header = "Nom;Code département;Nom de la région;Population totale\n";
 		Files.write(destinationPath, header.getBytes());
-
+		
+		Collections.sort(cities);
 		for (Ville city : cities) {
 			if (city.getTotalPopulation() >= 25000) {
 				String cityInfo = city.getName() + ";" + city.getNumDepartment() + ";" + city.getNameRegion() + ";"
@@ -66,7 +69,7 @@ public class LectureFichier {
 		for (Ville city : cities) {
 			String department = city.getNumDepartment();
 			int population = city.getTotalPopulation();
-
+			
 			populationByDepartment.put(department, populationByDepartment.getOrDefault(department, 0) + population);
 		}
 
