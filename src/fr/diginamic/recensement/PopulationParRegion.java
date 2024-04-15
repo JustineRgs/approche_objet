@@ -37,9 +37,6 @@ public class PopulationParRegion extends MenuService {
 			if (region.codeRegion == choice) {
 				System.out.println("Région recherchée : " + region.nomRegion + ". Population totale : "
 						+ region.populationTotale + " habitants.");
-			} else {
-				System.out.println("Région non trouvée.");
-				return;
 			}
 		}
 	}

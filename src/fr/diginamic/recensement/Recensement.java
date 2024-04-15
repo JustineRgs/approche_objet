@@ -21,16 +21,16 @@ public class Recensement {
 				"C:/Users/Tinou/Desktop/DEV/JAVA/approche_objet/src/fr/diginamic/recensement/" + nomFichier + ".csv");
 		List<String> list = Files.readAllLines(path);
 
-		boolean verif = false;
+		boolean found = false;
 		for (String line : list) {
 			String[] data = line.split(";");
 
-			if (verif == true) {
+			if (found == true) {
 				villes.add(new Ville(Integer.parseInt(data[0]), data[2], Integer.parseInt(data[5]),
 						Integer.parseInt(data[9].replaceAll(" ", "")), data[1], data[6]));
 			}
 
-			verif = true;
+			found = true;
 		}
 	}
 

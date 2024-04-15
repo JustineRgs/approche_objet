@@ -16,8 +16,5 @@ public class PopulationParVille extends MenuService {
 				break;
 			}
 		}
-		if (!found) {
-			System.out.println("Ville non trouvée!");
-		}
 	}
 }

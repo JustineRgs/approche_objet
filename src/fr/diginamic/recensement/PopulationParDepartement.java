@@ -34,7 +34,8 @@ public class PopulationParDepartement extends MenuService {
 				System.out.println("Département recherchée : " + departement.codeDepartement + ". Population totale : "
 						+ departement.populationTotale);
 				return;
-			}
+			} 	
+
 		}
 	}
 }
