@@ -1,10 +1,10 @@
 package tri;
 
-public class Ville implements Comparable<Ville> {
+public class Ville implements Comparable<tri.Ville> {
 	protected String name;
-	protected double population;
+	protected int population;
 	
-	public Ville(String name, double population) {
+	public Ville(String name, int population) {
 		super();
 		this.name = name;
 		this.population = population;
@@ -32,11 +32,11 @@ public class Ville implements Comparable<Ville> {
 		this.name = name;
 	}
 
-	public double getPopulation() {
+	public int getPopulation() {
 		return population;
 	}
 
-	public void setPopulation(double population) {
+	public void setPopulation(int population) {
 		this.population = population;
 	}
 

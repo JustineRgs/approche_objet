@@ -18,7 +18,7 @@ public class TriVilles {
 		listeVilles.add(new Ville("Marseille", 850700));
 		listeVilles.add(new Ville("Tarbes", 40600));
 
-		Collections.sort(listeVilles);
+		Collections.sort(listeVilles, new ComparatorHabitant(1));
 		for (Ville ville : listeVilles) {
 			System.out.println(ville);
 		}
