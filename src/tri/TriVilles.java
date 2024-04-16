@@ -17,8 +17,11 @@ public class TriVilles {
 		listeVilles.add(new Ville("Pau", 77200));
 		listeVilles.add(new Ville("Marseille", 850700));
 		listeVilles.add(new Ville("Tarbes", 40600));
+		
+		//Collections.sort(listeVilles, new ComparatorHabitant());
 
-		Collections.sort(listeVilles, new ComparatorHabitant(1));
+		Collections.sort(listeVilles, new ComparatorNom());
+
 		for (Ville ville : listeVilles) {
 			System.out.println(ville);
 		}

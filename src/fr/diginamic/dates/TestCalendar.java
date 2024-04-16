@@ -17,28 +17,28 @@ public class TestCalendar {
 
 		Date date = calendar.getTime();
 
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		String formattedDate = sdf.format(date);
+		SimpleDateFormat formattage = new SimpleDateFormat("dd/MM/yyyy");
+		String formattedDate = formattage.format(date);
 		System.out.println("Date au 19 mai 2016 à 23:59:30 : " + formattedDate);
 
-		sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		formattedDate = sdf.format(date);
+		formattage = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		formattedDate = formattage.format(date);
 		System.out.println("Date du jour (format par défaut) : " + formattedDate);
 
-		sdf = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", Locale.FRENCH);
-		formattedDate = sdf.format(date);
+		formattage = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", Locale.FRENCH);
+		formattedDate = formattage.format(date);
 		System.out.println("Date du jour (en français) : " + formattedDate);
 
-		sdf = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", new Locale("ru", "RU"));
-		formattedDate = sdf.format(date);
+		formattage = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", new Locale("ru", "RU"));
+		formattedDate = formattage.format(date);
 		System.out.println("Date du jour (en russe) : " + formattedDate);
 
-		sdf = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", Locale.CHINESE);
-		formattedDate = sdf.format(date);
+		formattage = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", Locale.CHINESE);
+		formattedDate = formattage.format(date);
 		System.out.println("Date du jour (en chinois) : " + formattedDate);
 
-		sdf = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", Locale.GERMAN);
-		formattedDate = sdf.format(date);
+		formattage = new SimpleDateFormat("EEEE, d MMMM yyyy HH:mm:ss", Locale.GERMAN);
+		formattedDate = formattage.format(date);
 		System.out.println("Date du jour (en allemand) : " + formattedDate);
 
 	}
