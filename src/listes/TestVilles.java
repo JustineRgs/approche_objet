@@ -8,14 +8,14 @@ public class TestVilles {
 	public static void main(String[] args) {
 		List<Ville> listeVilles = new ArrayList<>();
 
-		listeVilles.add(new Ville("Nice", 343000));
-		listeVilles.add(new Ville("Carcassonne", 47800));
-		listeVilles.add(new Ville("Narbonne", 53400));
-		listeVilles.add(new Ville("Lyon", 484000));
-		listeVilles.add(new Ville("Foix", 9700));
-		listeVilles.add(new Ville("Pau", 77200));
-		listeVilles.add(new Ville("Marseille", 850700));
-		listeVilles.add(new Ville("Tarbes", 40600));
+		listeVilles.add(new Ville("Nice", 343000, Continent.getContinent("Europe") ));
+		listeVilles.add(new Ville("Carcassonne", 47800, Continent.getContinent("Europe")));
+		listeVilles.add(new Ville("Narbonne", 53400, Continent.getContinent("Europe")));
+		listeVilles.add(new Ville("Lyon", 484000, Continent.getContinent("Europe")));
+		listeVilles.add(new Ville("Foix", 9700, Continent.getContinent("Europe")));
+		listeVilles.add(new Ville("Pau", 77200, Continent.getContinent("Europe")));
+		listeVilles.add(new Ville("Marseille", 850700, Continent.getContinent("Europe")));
+		listeVilles.add(new Ville("Tarbes", 40600, Continent.getContinent("Europe")));
 
 		for (Ville ville : listeVilles) {
 			System.out.println(ville);

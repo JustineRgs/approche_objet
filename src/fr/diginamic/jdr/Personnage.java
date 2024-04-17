@@ -94,6 +94,7 @@ public class Personnage {
 			default:
 				System.out.println("Merci d'avoir jouée!");
 			}
+			scanner.close();
 		}
 	}
 

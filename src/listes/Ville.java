@@ -5,24 +5,29 @@ import java.util.Objects;
 public class Ville {
 	protected String name;
 	protected double population;
-	
-	public Ville(String name, double population) {
+	Continent continent;
+
+	public Ville(String name, double population, Continent continent) {
 		super();
 		this.name = name;
 		this.population = population;
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-	    if (this == obj)
-	        return true;
-	    if (obj == null || getClass() != obj.getClass())
-	        return false;
-	    Ville other = (Ville) obj;
-	    return Objects.equals(this.name, other.name) &&
-	           this.population == other.population;
+		this.continent = continent;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null || getClass() != obj.getClass())
+			return false;
+		Ville other = (Ville) obj;
+		return Objects.equals(this.name, other.name) && this.population == other.population;
+	}
+
+	@Override
+	public String toString() {
+		return name + ", Population : " + population + ", Continent : " + continent;
+	}
 
 	public String getName() {
 		return name;
@@ -40,9 +45,12 @@ public class Ville {
 		this.population = population;
 	}
 
-	@Override
-	public String toString() {
-		return name + ", Population : " + population;
+	public Continent getContinent() {
+		return continent;
 	}
-	
+
+	public void setContinent(Continent continent) {
+		this.continent = continent;
+	}
+
 }
