@@ -15,10 +15,10 @@ public class Pays {
 	}
 
 	public static void main(String[] args) {
-		HashSet<Pays> hashSet = new HashSet<Pays>(Arrays.asList(new Pays("Usa", 12000, 50.5),
-				new Pays("France", 70000000, 50000), new Pays("Allemagne", 5000, 100), new Pays("Uk", 500, 100),
-				new Pays("Italie", 50000, 500), new Pays("Japon", 100000, 700), new Pays("Chine", 40000, 800),
-				new Pays("Russie", 400000, 900), new Pays("Inde", 70000, 50)));
+		HashSet<Pays> hashSet = new HashSet<Pays>(Arrays.asList(new Pays("Usa", 336997624, 59495),
+				new Pays("France", 64531444, 43551), new Pays("Allemagne", 83408554, 50206), new Pays("Uk", 67281039	, 43620),
+				new Pays("Italie", 59240329, 37970), new Pays("Japon", 124612530	, 42659), new Pays("Chine", 1425893465, 16624),
+				new Pays("Russie", 145102755, 28712), new Pays("Inde", 1407563842, 5174)));
 
 		double max = 0;
 		String paysMaxPib = "";
